@@ -1,29 +1,23 @@
 #include <stdio.h>
-#include <stdlib.h>
 /**
- * main - main block
- * Description: prints all single digit numbers of base 10
- * starting from 0, followed by a new line.
- * Return: 0
+ *main - entry point
+ *
+ *Description:prints numbers of base16 in lowercase
+ *
+ *Return: Always zero
  */
 int main(void)
 {
-	char d = '0';
+	int dig, letterhex, n;
 
-	while (d <= '9')
+	for (dig = 48, n = 0; n < 10; dig++, n++)
 	{
-		putchar(d);
-		d++;
+		putchar(dig);
 	}
-
-	char c = 'a';
-
-	while (c <= 'f')
+	for (letterhex = 97, n = 1; n < 7; letterhex++, n++)
 	{
-		putchar(c);
-		c++;
+		putchar(letterhex);
 	}
-
-	putchar('\n');
+	putchar(10);
 	return (0);
 }
