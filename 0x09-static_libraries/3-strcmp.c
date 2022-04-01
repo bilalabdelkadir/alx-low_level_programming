@@ -1,18 +1,23 @@
 #include "main.h"
 
-#include "main.h"
-
 /**
- * _isupper - Checks for uppercase characters.
- * @c: The character to be checked.
+ * _strcmp - Compares pointers to two strings.
+ * @s1: A pointer to the first string to be compared.
+ * @s2: A pointer to the second string to be compared.
  *
- * Return: 1 if character is uppercase, 0 otherwise.
+ * Return: If str1 < str2, the negative difference of
+ * the first unmatched characters.
+ *         If s1 == s2, 0.
+ *         If s1 > s2, the positive difference of
+ *         the first unmatched characters.
  */
-int _isupper(int c)
+int _strcmp(char *s1, char *s2)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (1);
+	while ((*s1 && *s2) && (*s1 == *s2))
+	{
+		s1++;
+		s2++;
+	}
 
-	else
-		return (0);
+	return (*s1 - *s2);
 }
