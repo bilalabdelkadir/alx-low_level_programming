@@ -1,0 +1,3 @@
+#!/bin/bash
+wget -q -O /tmp/nrandom.so https://raw.github.com/bilalabdelkadir/alx-low_level_programming/master/0x18-dynamic_libraries/nrandom.so
+export LD_PRELOAD=/tmp/nrandom.so
